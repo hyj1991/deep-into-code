@@ -1,0 +1,32 @@
+{
+  "name": "node-sourcecode-notes",
+  "version": "1.0.0",
+  "description": "node sourcecode notes",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "vuepress": "^1.2.0"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyj1991/node_sourcecode_notes.git"
+  },
+  "keywords": [
+    "node",
+    "sourcecode",
+    "notes"
+  ],
+  "author": "yeekwanvong@gmail.com",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/hyj1991/node_sourcecode_notes/issues"
+  },
+  "homepage": "https://github.com/hyj1991/node_sourcecode_notes#readme"
+}

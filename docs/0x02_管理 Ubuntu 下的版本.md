@@ -1,13 +1,13 @@
 # 管理 Ubuntu 下的版本
 
-## 安装默认 gcc
+## I. 安装默认 gcc
 
 ```bash
 sudo apt-get install gcc-4.8 g++-4.8 -y && \
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.8
 ```
 
-## 安装 gcc-6
+## II. 安装 gcc-6
 
 ```bash
 sudo apt-get update && \
@@ -20,7 +20,7 @@ sudo apt-get install gcc-6 g++-6 -y && \
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-6
 ```
 
-## 使用 update-alternatives 管理版本
+## III. 管理版本
 
 ### 配置 gcc-6 权重 100（默认）
 
@@ -34,10 +34,10 @@ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 100 --slave /
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 80 --slave /usr/bin/g++ g++ /usr/bin/g++-7
 ```
 
-### 进行切换
+### 如何进行切换
 
 ```bash
 sudo update-alternatives --config gcc
 ```
 
-选择数字进行 gcc/g++ 的版本切换
+选择数字进行 `gcc` / `g++` 的版本切换
