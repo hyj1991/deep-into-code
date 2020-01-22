@@ -1,24 +1,30 @@
-# Node.js / Libuv / V8 引擎源代码学习笔记
+访问语雀地址获得更好的阅读体验: [Node.js / V8 / Libuv 源码阅读笔记](https://www.yuque.com/yijun-rrmp0/nxwlp3)，语雀会在 Github 文章整理完成后进行更新。
 
-## 内容简介
-Node.js 的发展非常快，两年前 v6.x 还是最新的 LTS 版本，转眼间已经 Out of date 了，当时创建这个项目的时候原本计划以最新的 v6.x 的代码来编写源码学习记录，但是因为种种原因没有后续。正好借着这次 v12.x 即将进入 LTS 的机会，打算重拾此源代码的学习记录。
+## 章节目录
 
-因为 Node.js 本身就包含了 V8 引擎和 Libuv，所以内容里也会包含这两个部分，我个人也觉得三者组合起来才是 Node.js 底层实现的全貌。
+* [V8 引擎](#章节目录)
+  * [准备工作](https://github.com/hyj1991/sourcecode_notes/blob/master/docs/V8_PREPARE.md)
+    * [编译完整的 LLVM](https://github.com/hyj1991/sourcecode_notes/blob/master/docs/0x01_%E7%BC%96%E8%AF%91%E5%AE%8C%E6%95%B4%E7%9A%84%20LLVM.md)
+    * [管理 Ubuntu 下的 GCC 版本](https://github.com/hyj1991/sourcecode_notes/blob/master/docs/0x02_%E7%AE%A1%E7%90%86%20Ubuntu%20%E4%B8%8B%E7%9A%84%E7%89%88%E6%9C%AC.md)
+  * [单独编译 V8 引擎](https://github.com/hyj1991/sourcecode_notes/blob/master/docs/0x03_%E5%8D%95%E7%8B%AC%E7%BC%96%E8%AF%91%20V8%20%E5%BC%95%E6%93%8E.md)
+  * [初步了解 V8 引擎 (未完成)](https://github.com/hyj1991/sourcecode_notes/blob/master/docs/0x04_%E5%88%9D%E6%AD%A5%E4%BA%86%E8%A7%A3%20V8%20%E5%BC%95%E6%93%8E.md)
+  * [逆工程 V8 对象 (一)](https://github.com/hyj1991/sourcecode_notes/blob/master/docs/0x05_%E9%80%86%E5%B7%A5%E7%A8%8B%20V8%20%E5%AF%B9%E8%B1%A1.md)
+* [Libuv (未开始)](#章节目录)
+* [Node.js (未开始)](#章节目录)
 
-## 关于目前章节
 前期可能不会以完整体系的方式来进行编写（防止自己弃坑），会挑感兴趣的部分进行解析编写，等后续成文篇数足够编成体系的时候再进行章节的整理。
 
 ## 本地阅读
 
-本地采用了 vuepress，参照如下方法可以得到更好的本地阅读体验
+本地采用了 vuepress 方便实时预览
 
-## 安装
+### 安装
 
 ```bash
 npm install
 ```
 
-## 运行
+### 运行
 
 ```bash
 npm run docs:dev
